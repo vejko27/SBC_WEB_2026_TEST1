@@ -141,7 +141,7 @@
                   </svg>
                 </a>
                 <!--Toca suspender cotización y hacerlo con IA-->
-                <a href="contacto.html"
+                <a href="./contacto.html"
                   class="border-2 border-white/30 hover:border-orange-500/70 text-white hover:text-orange-300 font-bold px-7 py-3.5 rounded-full text-sm transition-all backdrop-blur-sm">
                   Solicitar cotización
                 </a>
@@ -202,15 +202,264 @@
                 Tu carga,<br />nuestra <span class="text-orange-500">responsabilidad</span>
               </h1> 
              <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-8 max-w-md">
-
+              Con 7 años operando bajo los más altos estándares de seguridad vial y cumplimiento normativo del MTC.
              </p>
+             <div class="flex flex-wrap gap-3">
+              <a href="nosotros.html"
+                  class="bg-orange-600 hover:bg-orange-500 text-white font-bold px-7 py-3.5 rounded-full text-sm transition-all flex items-center gap-2 shadow-xl shadow-orange-600/40">
+                  Sobre nosotros <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+              <a href="contacto.html"
+                  class="border-2 border-white/30 hover:border-orange-500/70 text-white hover:text-orange-300 font-bold px-7 py-3.5 rounded-full text-sm transition-all backdrop-blur-sm">Solicitar
+                  cotización</a>  
             </div>
-
+            </div>
           </div>
-         </div>
+        </div>
+    </div><!-- /slides -->
+
+    <!-- Flecha ANTERIOR -->
+    <button onclick="changeSlide(-1)"
+      class="absolute left-4 md:left-10 top-1/2 -translate-y-1/2 z-20 w-11 h-11 bg-black/25 hover:bg-orange-600 text-white rounded-full flex items-center justify-center backdrop-blur-sm border border-white/10 hover:border-orange-500 transition-all duration-300">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+
+    <!-- Flecha SIGUIENTE -->
+    <button onclick="changeSlide(1)"
+      class="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 z-20 w-11 h-11 bg-black/25 hover:bg-orange-600 text-white rounded-full flex items-center justify-center backdrop-blur-sm border border-white/10 hover:border-orange-500 transition-all duration-300">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+
+    <!-- Indicadores (dots) + barra de progreso -->
+    <div class="absolute bottom-0 left-0 right-0 z-20">
+      <!-- Barra de progreso naranja -->
+      <div class="h-0.5 bg-orange-600/20">
+        <div id="pgFill" class="h-full bg-orange-500 pg-anim"></div>
+      </div>
+      <!-- Dots -->
+      <div class="flex justify-center gap-2.5 py-5">
+        <button onclick="goToSlide(0)" id="d0" 
+          class="h-1.5 rounded-full carousel-dot-active" aria-label="Slide 1"></button>
+        <button onclick="goToSlide(1)" id="d1"
+          class="h-1.5 rounded-full carousel-dot-inactive" aria-label="Slide 2"></button>
+        <button onclick="goToSlide(2)" id="d2"
+          class="h-1.5 rounded-full carousel-dot-inactive" aria-label="Slide 3"></button>
+      </div>
+    </div>
+
+  </section>
+  <!-- /HERO CARRUSEL -->
+   <!-- ╔══════════════════════════════════════════════════════════════
+     ║  ESTADÍSTICAS
+     ║  Franja gray-900 con borde naranja superior.
+     ║  4 métricas clave con efecto hover de escala.
+     ╚══════════════════════════════════════════════════════════════ -->
+  <section class="bg-gray-900 border-t-4 border-orange-600 py-11">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="group cursor-default">
+          <p
+            class="text-4xl md:text-5xl font-black text-orange-500 group-hover:scale-110 transition-transform duration-300">
+            +500</p>
+          <p class="text-gray-400 text-sm mt-1.5 font-medium">Viajes completados</p>
+        </div>
+        
+        <div class="group cursor-default">
+          <p
+            class="text-4xl md:text-5xl font-black text-orange-500 group-hover:scale-110 transition-transform duration-300">
+            +5</p>
+          <p class="text-gray-400 text-sm mt-1.5 font-medium">Años de experiencia</p>
+        </div>
+        <div class="group cursor-default">
+          <p
+            class="text-4xl md:text-5xl font-black text-orange-500 group-hover:scale-110 transition-transform duration-300">
+            24/7</p>
+          <p class="text-gray-400 text-sm mt-1.5 font-medium">Soporte operativo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════════════════════════════
+     ║  SERVICIOS PRINCIPALES
+     ║
+     ║  · 6 tarjetas en grid 3 columnas
+     ║  · Hover: fondo oscuro, ícono naranja
+     ║  · Tarjeta 6 (GPS) siempre con fondo naranja (destacada)
+     ╚══════════════════════════════════════════════════════════════ -->
+  <section id="servicios" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-14">
+        <span class="inline-block text-orange-600 font-black text-xs uppercase tracking-[0.2em] mb-3">── Lo que
+          ofrecemos ──</span>
+        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4">Nuestros <span
+            class="text-orange-600">Servicios</span></h2>
+        <p class="text-gray-500 max-w-xl mx-auto text-base md:text-lg">Soluciones de transporte y logística para cada
+          sector industrial del país.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <!-- Tarjeta 1: Transporte de Carga -->
+        <a href="servicios.html#carga"
+          class="group bg-gray-50 hover:bg-gray-900 rounded-2xl p-7 transition-all duration-300 border border-gray-100 hover:border-orange-600/30 hover:shadow-xl block">
+          <div
+            class="w-12 h-12 bg-orange-100 group-hover:bg-orange-600 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300">
+            <svg class="w-6 h-6 text-orange-600 group-hover:text-white transition-colors" fill="none"
+              stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10h10zM13 8h3l3 3v5h-3m-3 0H9" />
+            </svg>
+          </div>
+          <h3 class="text-gray-900 group-hover:text-white font-bold text-base mb-2 transition-colors">Transporte de
+            Carga Pesada</h3>
+          <p class="text-gray-500 group-hover:text-gray-400 text-sm leading-relaxed transition-colors">Traslado de carga
+            pesada y sobredimensionada con unidades especializadas y operadores certificados.</p>
+          <div
+            class="mt-5 flex items-center gap-1.5 text-orange-600 group-hover:text-orange-400 text-xs font-bold transition-colors">
+            Ver más <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </div>
+        </a>
+
+        <!-- Tarjeta 2: Logística Integral -->
+        <a href="servicios.html#logistica"
+          class="group bg-gray-50 hover:bg-gray-900 rounded-2xl p-7 transition-all duration-300 border border-gray-100 hover:border-orange-600/30 hover:shadow-xl block">
+          <div
+            class="w-12 h-12 bg-orange-100 group-hover:bg-orange-600 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300">
+            <svg class="w-6 h-6 text-orange-600 group-hover:text-white transition-colors" fill="none"
+              stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+            </svg>
+          </div>
+          <h3 class="text-gray-900 group-hover:text-white font-bold text-base mb-2 transition-colors">Logística Integral
+          </h3>
+          <p class="text-gray-500 group-hover:text-gray-400 text-sm leading-relaxed transition-colors">Planificación de
+            rutas, gestión de almacenes y coordinación de entregas para máxima eficiencia.</p>
+          <div
+            class="mt-5 flex items-center gap-1.5 text-orange-600 group-hover:text-orange-400 text-xs font-bold transition-colors">
+            Ver más <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </div>
+        </a>
+
+        <!-- Tarjeta 3: Sector Minero -->
+        <a href="servicios.html#mineria"
+          class="group bg-gray-50 hover:bg-gray-900 rounded-2xl p-7 transition-all duration-300 border border-gray-100 hover:border-orange-600/30 hover:shadow-xl block">
+          <div
+            class="w-12 h-12 bg-orange-100 group-hover:bg-orange-600 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300">
+            <svg class="w-6 h-6 text-orange-600 group-hover:text-white transition-colors" fill="none"
+              stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+            </svg>
+          </div>
+          <h3 class="text-gray-900 group-hover:text-white font-bold text-base mb-2 transition-colors">Sector Minero</h3>
+          <p class="text-gray-500 group-hover:text-gray-400 text-sm leading-relaxed transition-colors">Transporte
+            especializado para insumos, maquinaria y mineral hacia zonas de alta exigencia operativa.</p>
+          <div
+            class="mt-5 flex items-center gap-1.5 text-orange-600 group-hover:text-orange-400 text-xs font-bold transition-colors">
+            Ver más <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </div>
+        </a>
+
+        <!-- Tarjeta 4: Construcción e Industrial -->
+        <a href="servicios.html#construccion"
+          class="group bg-gray-50 hover:bg-gray-900 rounded-2xl p-7 transition-all duration-300 border border-gray-100 hover:border-orange-600/30 hover:shadow-xl block">
+          <div
+            class="w-12 h-12 bg-orange-100 group-hover:bg-orange-600 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300">
+            <svg class="w-6 h-6 text-orange-600 group-hover:text-white transition-colors" fill="none"
+              stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+          </div>
+          <h3 class="text-gray-900 group-hover:text-white font-bold text-base mb-2 transition-colors">Construcción e
+            Industrial</h3>
+          <p class="text-gray-500 group-hover:text-gray-400 text-sm leading-relaxed transition-colors">Materiales de
+            construcción, equipos industriales y suministros con precisión y cumplimiento normativo.</p>
+          <div
+            class="mt-5 flex items-center gap-1.5 text-orange-600 group-hover:text-orange-400 text-xs font-bold transition-colors">
+            Ver más <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </div>
+        </a>
+
+        <!-- Tarjeta 5: Residuos Sólidos -->
+        <a href="servicios.html#residuos"
+          class="group bg-gray-50 hover:bg-gray-900 rounded-2xl p-7 transition-all duration-300 border border-gray-100 hover:border-orange-600/30 hover:shadow-xl block">
+          <div
+            class="w-12 h-12 bg-orange-100 group-hover:bg-orange-600 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300">
+            <svg class="w-6 h-6 text-orange-600 group-hover:text-white transition-colors" fill="none"
+              stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+            </svg>
+          </div>
+          <h3 class="text-gray-900 group-hover:text-white font-bold text-base mb-2 transition-colors">Residuos Sólidos
+          </h3>
+          <p class="text-gray-500 group-hover:text-gray-400 text-sm leading-relaxed transition-colors">Gestión y
+            transporte de residuos industriales cumpliendo todas las normativas ambientales vigentes.</p>
+          <div
+            class="mt-5 flex items-center gap-1.5 text-orange-600 group-hover:text-orange-400 text-xs font-bold transition-colors">
+            Ver más <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </div>
+        </a>
+
+        <!-- Tarjeta 6: Trazabilidad GPS (siempre naranja) -->
+        <a href="servicios.html#gps"
+          class="group bg-orange-600 hover:bg-orange-500 rounded-2xl p-7 transition-all duration-300 block">
+          <div
+            class="w-12 h-12 bg-white/20 group-hover:bg-white/30 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="text-white font-bold text-base mb-2">Trazabilidad GPS</h3>
+          <p class="text-orange-100 text-sm leading-relaxed">Monitoreo en tiempo real de toda la flota. Visibilidad
+            total de tu carga desde origen hasta destino.</p>
+          <div class="mt-5 flex items-center gap-1.5 text-white text-xs font-bold">
+            Ver más <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="servicios.html"
+          class="inline-flex items-center gap-2 border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white font-bold px-8 py-3.5 rounded-full transition-all duration-200 text-sm">
+          Ver todos los servicios
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
 
     </div>
+  </section>
       
-    </section>
+    
   </body>
 </html>
